@@ -46,6 +46,7 @@ class ImageJQCropInfoField(with_metaclass(models.SubfieldBase, models.Field)):
     def __init__(self, size="300x300", image_field='image', *args, **kwargs):
         self.image_field = image_field
         self.size = size
+        self.max_length=255
         super(ImageJQCropInfoField, self).__init__(*args, **kwargs)
 
     def to_python(self, value):
@@ -85,6 +86,7 @@ class ImageJQCropInfoField(with_metaclass(models.SubfieldBase, models.Field)):
         """
         # We'll just introspect ourselves, since we inherit.
         from south.modelsinspector import introspector
-        field_class = "smk.accounts.fields.ImageJQCropInfoField"
+        field_class = "django.db.models.fields.CharField"
         args, kwargs = introspector(self)
+        kwargs.update({"max_length":255})
         return field_class, args, kwargs
