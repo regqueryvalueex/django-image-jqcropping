@@ -2,7 +2,7 @@
 Install django-image-jqcropping using <tt>pip</tt>:
 <pre>pip install django-image-jqcropping</pre>
 <h2>Usage</h2>
-<p>Add <tt>easy_thumbnails</tt> and <tt>image_cropping</tt> to your INSTALLED_APPS</p>
+<p>Add <tt>easy_thumbnails</tt> and <tt>image_jqcropping</tt> to your INSTALLED_APPS</p>
 
 <p>In Your <tt>models.py</tt></p>
 
