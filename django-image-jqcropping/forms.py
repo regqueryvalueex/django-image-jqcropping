@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django import forms
-from smk.accounts.widgets import ImageJQCropInfoFormWidget
+from .widgets import ImageJQCropInfoFormWidget
 
 
 class ImageJQCropInfoFormField(forms.MultiValueField):
